@@ -11,7 +11,7 @@
     <!-- NAVBAR -->
     <nav class="navbar" id="navbar">
       <a href="index.html" class="nav-logo">
-        <img src="/testlogo.png" alt="logo" class="nav-logo-img" />
+        <img src="./testlogo.png" alt="logo" class="nav-logo-img" />
         Gadget<span>Hub</span>
       </a>
       <ul class="nav-links">
@@ -319,6 +319,7 @@
 
       <div class="video-frame animate-in delay-2">
         <div class="video-placeholder" id="video-placeholder">
+          
           <div class="play-btn" onclick="playVideo()" title="Play Video">▶</div>
           <h3>GadgetHub — Company Profile 2024</h3>
           <p>Klik untuk menonton video profil perusahaan kami</p>
@@ -580,18 +581,21 @@
           title.textContent = "Buat Akun Baru";
         }
       }
-      function playVideo() {
-        const youtubeId = "dQw4w9WgXcQ";
-        const placeholder = document.getElementById("video-placeholder");
-        const wrap = placeholder.parentElement;
-        placeholder.remove();
-        const iframe = document.createElement("iframe");
-        iframe.src = `https://www.youtube.com/embed/${youtubeId}?autoplay=1`;
-        iframe.allow = "autoplay; fullscreen";
-        iframe.style.cssText =
-          "width:100%;height:100%;border:none;display:block;";
-        wrap.appendChild(iframe);
-      }
+function playVideo() {
+  const driveId = "15WY_Cy8eCiRP20u9Az73fXaTs33l1Xj1";
+  const placeholder = document.getElementById("video-placeholder");
+  const wrap = placeholder.parentElement;
+
+  placeholder.remove();
+
+  const iframe = document.createElement("iframe");
+  iframe.src = `https://drive.google.com/file/d/${driveId}/preview`;
+  iframe.allow = "autoplay";
+  iframe.style.cssText =
+    "width:100%;height:100%;border:none;display:block;";
+
+  wrap.appendChild(iframe);
+}
     </script>
   </body>
 </html>
